@@ -35,6 +35,8 @@ USB A male to USB mini B male cable
 
 USB A male to USB micro B USB male cable
 
+USB A male to USB B male cable
+
 10k ohm 1/4 W resistor
 
 3 x wired female Dupont connectors for pi pin headers to switch connection
