@@ -1,0 +1,28 @@
+The following will create a systemd service to launch the python script on start that monitors for button press:
+
+create systemd service file
+
+	sudo nano /etc/systemd/system/gpio-monitor.service
+
+copy the following into the editor and save
+
+	[Unit]
+	Description=GPIO Python Monitor Service
+	After=multi-user.target
+
+	[Service]
+	Type=idle
+	ExecStart=/usr/bin/python3 /home/USER/prisma/scripts/usb_connect.py
+
+	[Install]
+	WantedBy=multi-user.target
+
+set the file permissions
+
+	sudo chmod 755 /etc/systemd/system/gpio-monitor.service
+
+reload systemd and enable service
+
+	sudo systemctl daemon-reload
+	
+	sudo systemctl enable gpio-monitor.service

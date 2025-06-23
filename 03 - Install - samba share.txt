@@ -1,0 +1,32 @@
+The following steps will install samba and setup share on archive directory:
+
+install samba
+
+	sudo apt install samba samba-common-bin
+
+setup archive directory for sharing
+
+	chmod 777 /home/USER/prisma/archive
+
+setup samba user
+
+	sudo smbpasswd -a USER
+
+add the following to the end of the samba conf file and save
+
+	sudo nano /etc/samba/smb.conf
+
+		# Prismafiles share
+		[prismafiles]
+		comment = Prisma file archive
+		path = /home/USER/prisma/archive
+		browseable = yes
+		writable = yes
+		create mask = 0777
+		directory mask = 0777
+		public = yes
+		guest ok = yes
+
+restart samba
+
+	sudo systemctl restart smbd

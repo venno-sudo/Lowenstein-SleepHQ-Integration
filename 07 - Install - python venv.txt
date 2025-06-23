@@ -1,0 +1,19 @@
+The following commands will setup the python virtual environmnet required by the user scripts:
+
+create venv
+
+	cd /home/USER/prisma
+	
+	python -m venv mypython
+
+activate venv
+
+	source mypython/bin/activate
+
+install venv script dependancies
+
+	pip install requests python-dotenv
+
+deactivate venv
+
+	deactivate

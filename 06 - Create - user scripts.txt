@@ -1,0 +1,37 @@
+Copy scripts into /home/USER/prisma/scripts and make .sh ones executable (not as root):
+
+Setup in user directory under a sub directory
+
+	cd /home/USER/prisma/scripts
+
+	nano prisma20a_sleephq_uploader.py
+
+copy contents into editor and save
+
+	nano transfer_data.py
+
+copy contents into editor and save
+
+	nano usb_connect.py
+
+copy contents into editor and save
+
+	nano upload_data.sh
+
+copy contents into editor and save
+
+	nano ykushxs_off.sh
+
+copy contents into editor and save
+
+	nano ykushxs_on.sh
+
+copy contents into editor and save
+
+	nano nas_sync.sh
+
+copy contents into editor and save
+
+Make executable
+
+	chmod +x *.sh

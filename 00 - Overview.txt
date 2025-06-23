@@ -1,0 +1,86 @@
+This document outlines the order of execution to setup the integration of Primsa device on a raspberry pi.
+
+Presumes the following hardware is used:
+
+	Pi Zero 2W
+	Ykush XS usb controller
+	Synology NAS
+	Momentary push button
+
+PREWORK
+
+NB - logic hi was chosen for ease of fault finding, should it be required
+
+Connect physical button to produce a logic Hi when pressed (logic 0 pulldown when not pressed):
+
+	GPIO pin 26 (physical pin 37) to button 'a' leg
+	GND (physcial pin 39) to 10k ohm resistor to button 'a' leg
+	3.3V (physical pin 1) to button 'b' leg
+
+Prepare SD card
+
+NB - Bookworm requires wifi to be set manually after first boot
+NB - Desktop version chosen due to pluggable USB 'client' behaviour
+
+Using raspberry pi imager tool:
+
+	set OS as Bookworm 32 bit desktop
+	
+	configure customisations
+	
+	set user and password - USER PWD
+	set hostname - prismapi
+	set locale - XX
+	set SSH to checked
+	
+	burn image
+
+
+INSTALL:
+
+Connect monitor to pi
+Connect keyboard and mouse to pi using an OTG USB hub
+
+insert SD card and power on pi, wait until install fully completes and desktop view present then -
+
+	enable wifi
+	enter SSID and PSK
+	set static IP
+	reboot
+	
+Disconnect hub and monitor, connect ykush board to pi and prisma
+
+SSH in and update software:
+
+	sudo apt install && sudo apt upgrade -y
+	sudo reboot
+
+
+SETUP
+
+NB - I encountered errors with the Team ID code in the prisma20a_sleephq_uploader.py script so I hard coded my Team ID
+NB - I did not enable Notify in my setup
+
+SSH in to pi
+
+01 - Install ykush software for control of usb connection to prisma device
+
+02 - Create directory structure for prisma device integration
+
+03 - Install samba and setup share to archived prisma device files
+
+04 - Create NFS share to synology NAS for archived prisma device files
+
+05 - Create an init.d system entry to make ykush board default to usb connection "off" on pi startup
+
+06 - Create the user scripts to support the prisma device integration
+
+07 - Install python virtual environment to support user python scripts
+
+08 - Configure sleephq script to generate env file prior to production use
+
+09 - Configure a crontab entry to run uploader script every 5 mins to check for prisma device prescence
+
+10 - Create systemd service to run python gpio monitoring on pi startup
+
+Reboot pi to put changes into effect

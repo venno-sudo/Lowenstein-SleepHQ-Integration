@@ -1,0 +1,15 @@
+The following directories are created in the /home/USER user directory (not as root):
+
+Setup in user directory
+
+	cd /home/USER
+
+	mkdir prisma
+	
+	mkdir prisma/archive
+	
+	mkdir prisma/data
+	
+	mkdir prisma/scripts
+	
+	mkdir prisma/mypython	

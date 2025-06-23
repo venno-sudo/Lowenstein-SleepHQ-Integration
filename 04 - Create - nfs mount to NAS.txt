@@ -1,0 +1,36 @@
+The following will create an NFS mount point to a Synology NAS for archiving the Prisma files off the pi:
+
+Create shared NFS folder on NAS
+
+	volume1/PrismaFiles
+	
+Set shared folder NFS Permissions
+
+	Hostname - IP address of pi
+	Privilege - Read/Write
+	Squash - Map all users to admin
+	Security - sys
+	Enable asyncronous - checked
+	Non-priv connections - unchecked
+	Allow subfolders - checked
+
+Create directory for mount point
+
+	sudo mkdir /mnt/mynas
+	
+Create fstab entry to mount on startup
+
+	sudo nano /etc/fstab
+	
+Copy the following to end of ile and save
+
+	# NFS Mount to NAS for Prisma Files
+	NAS_IP_ADDRESS:/volume1/PrismaFiles /mnt/mynas nfs defaults,auto,noatime,nofail,x-systemd.device-timeout=20 0 0
+	
+Mount directory
+
+	sudo mount -a
+	
+Reload fstab
+
+	sudo systemctl daemon-reload

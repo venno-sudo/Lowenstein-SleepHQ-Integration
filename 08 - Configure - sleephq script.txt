@@ -1,0 +1,47 @@
+Run the sleephq script manually to setup env file prior to production use:
+
+Navigate to scripts directory
+
+	cd /home/USER/prisma/scripts
+	
+Run the script
+
+	/home/USER/prisma/mypython/bin/python3 prisma20a_sleephq_uploader.py
+
+Enter your Sleep HQ details for API access
+
+	enter Client ID
+
+		_from sleep hq account_
+
+	enter Secret
+
+		_from sleep hq account_
+
+	enter path for prisma file copies
+
+		/home/USER/prisma/data
+
+	enter prisma serial number
+
+		_LowensteinDevice_
+
+
+	use notify
+	
+		Yes/No
+		
+	notify topic
+	
+		<enter>
+		
+	notify auth
+	
+		<enter>
+		
+**Note Team ID has been hard coded due to script error
+**Note notify auth not currently working
+
+Team ID
+
+_from sleep hq account_

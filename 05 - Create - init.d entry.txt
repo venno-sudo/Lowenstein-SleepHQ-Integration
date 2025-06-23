@@ -1,0 +1,15 @@
+The following script is added to init.d to turn off ykush board on boot (ykush deafults to on):
+
+place script in /etc/init.d
+
+	sudo nano /etc/init.d/ykushxs_init.sh
+
+copy contents into editor and save
+
+make script executable
+
+	sudo chmod +x /etc/init.d/ykushxs_init.sh
+
+update init.d
+
+	sudo update-rc.d ykushxs_init.sh defaults

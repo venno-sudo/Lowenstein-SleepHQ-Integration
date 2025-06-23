@@ -1,0 +1,15 @@
+The follwoing crontab entry is made to execute script that monitors for prisma connection every 5 minutes:
+
+edit crontab
+
+	crontab -e
+
+select option 1 nano as editor
+
+copy this line to file and save
+
+	*/5 * * * * /home/USER/prisma/scripts/upload_data.sh
+
+restart crontab
+
+	sudo service cron reload

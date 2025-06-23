@@ -1,0 +1,33 @@
+The following steps will install the software support for the ykushxs board:
+
+select install directory
+
+	cd /etc/opt
+
+install depedencies
+
+	sudo apt install libusb-1.0-0-dev
+
+download ykush software
+
+	sudo wget https://github.com/Yepkit/ykush/archive/1.2.2.zip
+
+extract the files
+
+	sudo unzip 1.2.2.zip
+
+build the code
+
+	cd ykush-1.2.2
+	
+	sudo ./build.sh
+
+install the code
+
+	sudo ./install.sh
+
+remove setup files
+
+	cd /etc/opt
+
+	sudo rm 1.2.2.zip
