@@ -13,7 +13,7 @@ I have had to hard code the Team ID portion of this script as I had errors when 
 
 Refer to overview file and individual txt files for further information on how to perform the integration. You may wish to leave out parts not required for your purpose. You will also have to adjust paths and variables to suite your installation.
 
-I used the following hardware items in thsi project:
+I used the following hardware items in this project:
 
 https://www.yepkit.com/product/300115/YKUSHXS
 
