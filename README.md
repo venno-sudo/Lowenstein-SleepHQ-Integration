@@ -43,8 +43,10 @@ Refer jpeg of finished enclosure that houses equipment used.
 
 My intent was to have a system, that upon the press of a button, will open a USB connection to the Prisma thus allowing the pi to scan for the SD card files and upload them automatically to Sleep HQ. Upon completion the USB connection will be closed thus returning the Prisma to normal operational state (it locks when USB connected).
 
-Process timing is important as the Prisma will turn off after around 12 minutes of inactivity. Typically you would operate the button, after waking and finishing the nights cpap therapy, before the machines gets a chance to shutdown. The machine will stay awake while it is connected to an active USB host. The Ykush XS board not only opens/closes the USB power lines but also opens/closes the USB data lines, so there is no harm in leaving the cabling permanently connected.
+Process timing is important as the Prisma will turn off after around 12 minutes of inactivity. Typically you would operate the button, after waking and finishing the nights cpap therapy, before the machines gets a chance to shutdown. The machine will stay awake while it is connected to an active USB host. 
 
-The collected project files scripts and documentation represents a first draft of the project. The intent is to improve on the software aspect over time and move away from deprecated features such as crontab to more robust features such as systemd.
+The Ykush XS board not only connects/disconnects the USB power lines but also connects/disconnects the USB data lines, so there is no harm in leaving the cabling permanently connected.
+
+The collected project files, scripts and documentation represents a first draft of the project. The intent is to improve on the software aspect over time and move away from deprecated features such as crontab to more robust features such as systemd.
 
 
