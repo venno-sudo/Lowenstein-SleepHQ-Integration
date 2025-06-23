@@ -32,8 +32,11 @@ https://www.altronics.com.au/p/p0628-2.1mm-female-plastic-chassis-mount-dc-power
 https://core-electronics.com.au/raspberry-pi-3-power-supply.html
 
 USB A male to USB mini B male cable
+
 USB A male to USB micro B USB male cable
+
 10k ohm 1/4 W resistor
+
 3 x wired female Dupont connectors for pi pin headers to switch connection
 
 Refer jpeg of finished enclosure that houses equipment used.
