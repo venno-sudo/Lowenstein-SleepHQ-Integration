@@ -16,13 +16,21 @@ Refer to overview file and individual txt files for further information on how t
 I used the following hardware items in thsi project:
 
 https://www.yepkit.com/product/300115/YKUSHXS
+
 https://www.amazon.com.au/waveshare-Raspberry-Pre-Soldered-Quad-Core-Cortex-A53/dp/B09LTDQY2Z/ref=sr_1_5?crid=3JTLKEB7S29XT&sprefix=pi+zero+kit%2Caps%2C252&sr=8-5
+
 https://www.altronics.com.au/p/h0201-ub1-157lx95wx53hmm-black-abs-jiffy-box/
+
 https://www.altronics.com.au/p/s0950a-spst-vandal-resistant-screw-terminal-pushbutton-switch/
+
 https://www.altronics.com.au/p/p0836-neutrik-usb-2.0-type-a-type-b-chassis-silver-nausb/
+
 https://www.altronics.com.au/p/p0634a-2.1mm-female-line-strain-relief-dc-power-plug-9.5mm/
+
 https://www.altronics.com.au/p/p0628-2.1mm-female-plastic-chassis-mount-dc-power-socket/
+
 https://core-electronics.com.au/raspberry-pi-3-power-supply.html
+
 USB A male to USB mini B male cable
 USB A male to USB micro B USB male cable
 10k ohm 1/4 W resistor
