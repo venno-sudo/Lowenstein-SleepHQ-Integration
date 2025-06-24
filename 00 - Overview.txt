@@ -79,7 +79,7 @@ SSH in to pi
 
 08 - Configure sleephq script to generate env file prior to production use
 
-09 - Configure a crontab entry to run uploader script every 5 mins to check for prisma device prescence
+09 - Configure rules.d and a systemd service to run uploader script when prisma device connected
 
 10 - Create systemd service to run python gpio monitoring on pi startup
 

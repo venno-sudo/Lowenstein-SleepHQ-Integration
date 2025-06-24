@@ -1,4 +1,5 @@
 #!/bin/bash
+sleep 10
 if grep -qs '/media/USER/Weinmann ' /proc/mounts; then
     cd /home/USER/prisma/scripts
     /home/USER/prisma/mypython/bin/python3 transfer_data.py
