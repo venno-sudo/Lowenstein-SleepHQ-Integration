@@ -1,0 +1,35 @@
+The following udev rule and systemd service entry is made to execute script that monitors for prisma connection:
+
+create udev rule file
+
+	sudo nano /etc/udev/rules.d/99-usb.rules
+
+add the following to the editor and save
+
+	ACTION=="add", KERNEL=="sda", SUBSYSTEM=="block", SUBSYSTEMS=="usb", TAG+="systemd", ENV{SYSTEMD_WANTS}="prisma-monitor.service"
+
+reload udev rules
+
+	sudo udevadm control --reload-rules 
+
+create a systemd service to be triggered by udev rule
+
+	sudo nano /etc/systemd/system/prisma-monitor.service
+	
+add the following to the editor and save
+	
+	[Unit]
+	Description=My USB Service for Prisma
+
+	[Service]	
+	Type=simple
+	ExecStart=/home/USER/prisma/scripts/upload_data.sh
+
+	[Install]
+	WantedBy=multi-user.target
+	
+enable systemd service and reload
+
+	sudo systemctl enable prisma-monitor.service
+	
+	sudo systemctl daemon-reload
