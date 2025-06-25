@@ -23,6 +23,7 @@ add the following to the editor and save
 
 	[Service]	
 	Type=simple
+	User=USER
 	ExecStart=/home/USER/prisma/scripts/upload_data.sh
 
 	[Install]

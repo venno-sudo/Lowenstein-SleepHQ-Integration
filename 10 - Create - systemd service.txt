@@ -8,10 +8,10 @@ copy the following into the editor and save
 
 	[Unit]
 	Description=GPIO Python Monitor Service
-	After=multi-user.target
 
 	[Service]
-	Type=idle
+	Type=simple
+	User=USER
 	ExecStart=/usr/bin/python3 /home/USER/prisma/scripts/usb_connect.py
 
 	[Install]
