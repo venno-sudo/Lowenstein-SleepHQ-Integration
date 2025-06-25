@@ -49,6 +49,6 @@ Process timing is important as the Prisma will turn off after around 12 minutes 
 
 The Ykush XS board not only connects/disconnects the USB power lines but also connects/disconnects the USB data lines, so there is no harm in leaving the cabling permanently connected.
 
-The collected project files, scripts and documentation represents a first draft of the project. The intent is to improve on the software aspect over time and move away from deprecated features such as crontab to more robust features such as systemd.
+The collected project files, scripts and documentation represents the production version of the project.
 
 
